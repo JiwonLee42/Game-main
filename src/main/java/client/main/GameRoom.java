@@ -1,5 +1,7 @@
 package client.main;
 
+import client.main.mainmap.MainMap;
+
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 
@@ -12,6 +14,7 @@ public class GameRoom {
     private int roomCode;
     private int joinNum = 0; // gameRoom에 참여한 유저 수
     private LocalDateTime startTime; //생성된 시간
+    private MainMap mainMap = new MainMap();
 
     /**
      * 게임룸 생성 및 게임유저 입장 로직
