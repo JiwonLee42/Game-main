@@ -22,7 +22,7 @@ public class RoomManager {
      */
     public static GameRoom createRoom() { // 빈 방을 새로 생성
         int roomId = automicInteger.incrementAndGet(); // room id 채번
-        GameRoom room = new GameRoom(roomId);
+        GameRoom room = new GameRoom(roomId, (int)(Math.random() * 89999) + 10000);
         gameRooms.add(room);
         System.out.println("빈 방이 생성되었습니다!");
         return room;
@@ -35,8 +35,9 @@ public class RoomManager {
      */
     public static GameRoom createRoom(GameUser owner) {
         int roomId = automicInteger.incrementAndGet();
+        int roomCode = (int)(Math.random() * 89999) + 10000;
 
-        GameRoom room = new GameRoom(roomId, owner);
+        GameRoom room = new GameRoom(roomId, owner, roomCode);
         gameRooms.add(room);
 
         System.out.println("유저가 방을 만들었습니다! 해당 유저는 방장이 됩니다.");

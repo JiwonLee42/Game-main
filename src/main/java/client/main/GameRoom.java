@@ -25,14 +25,14 @@ public class GameRoom {
         this.startTime = LocalDateTime.now();
     }
 
-    public GameRoom(int roomId) {
+    public GameRoom(int roomId, int roomCode) {
         this.id = roomId;
-        createRoomCode();
+        this.roomCode = roomCode;
         this.startTime = LocalDateTime.now();
     }
 
     //유저가 방 만들 때
-    public GameRoom(int roomId, GameUser user) {
+    public GameRoom(int roomId, GameUser user, int roomCode) {
         this.id = roomId;
         createRoomCode();
 
