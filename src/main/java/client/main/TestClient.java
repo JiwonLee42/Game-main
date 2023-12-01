@@ -12,7 +12,7 @@ public class TestClient {
     public static void main(String[] args) {
 
         try {
-            Socket socket = new Socket("localhost", 48612);
+            Socket socket = new Socket("localhost", 18501);
 
             // 입력 스트림
             // 서버에서 보낸 데이터를 받음
