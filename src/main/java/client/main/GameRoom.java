@@ -8,7 +8,7 @@ import java.util.ArrayList;
 public class GameRoom {
 
     private int id; //
-    private ArrayList<GameUser> gameUsers;
+    private ArrayList<GameUser> gameUsers = new ArrayList<>();
     private GameUser gameOwner; // 방장
     private String roomName;
     private int roomCode;

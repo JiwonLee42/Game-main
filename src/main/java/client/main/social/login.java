@@ -1,4 +1,4 @@
-package client.social;
+package client.main.social;
 
 import javax.swing.*;
 import java.awt.*;
@@ -99,7 +99,7 @@ public class login extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 dispose(); // Close the current login window
-                new signup(); // Open the signup window
+                new client.social.signup(); // Open the signup window
             }
         });
         formPanel.add(moveToSignupButton);
