@@ -2,6 +2,7 @@ package client.main.view;
 
 import client.main.GameRoom;
 import client.main.GameUser;
+import client.main.mainmap.Dice;
 import client.main.member.Member;
 import client.main.object.PlanetNode;
 
@@ -35,6 +36,11 @@ public class MainMapView extends JFrame implements Runnable {
     Image background = background_.getScaledInstance(scaledWidth, scaledHeight, Image.SCALE_SMOOTH);
 
     ArrayList<PlanetNode> nodes = new ArrayList<>();
+    // 각 노드별 코인 정보 저장 배열
+    int[] coinInfo = {3, -3, 3, 3, -3, 3, 3, 3, -3, 3, 3, 3, -3, 3, -3, 3};
+
+    Dice dice = new Dice();
+
     GameRoom room;
     ArrayList<GameUser> users = new ArrayList<>();
     GameUser turnPlayer; //현재 자신의 차례인 플레이어
@@ -48,8 +54,13 @@ public class MainMapView extends JFrame implements Runnable {
         turnInfo.put(0, 0);
 
         //플레이어 키 입력 스레드
-        KeyControl key = new KeyControl(turnPlayer, this);
-        th = new Thread(key);
+//        KeyControl key = new KeyControl(turnPlayer, this);
+//        th = new Thread(key);
+//        th.start();
+
+        //플레이어 마우스 입력 스레드
+        MouseControl mouse = new MouseControl(turnPlayer, this);
+        th = new Thread(mouse);
         th.start();
 
         // 테두리 이미지 배치
@@ -58,6 +69,7 @@ public class MainMapView extends JFrame implements Runnable {
         int startY = (800 - totalSize) / 2;
         int distY = 0;
 
+        // 행성 노드 생성 및 추가
         for (int i = 0; i < 16; i++) {
             String path = "SOURCE/planet" + ((i % 9) + 1)+ ".png";
             Image img = tk.getImage(path);
@@ -71,11 +83,11 @@ public class MainMapView extends JFrame implements Runnable {
                     int x = startX + col * (gridSize + gap);
                     int y = startY + row * (gridSize + gap);
                     //g.drawImage(planetImages[index], x, y, gridSize, gridSize, null);
-                    nodes.add(new PlanetNode(index, x, y, planetImages[index]));
+                    nodes.add(new PlanetNode(index + 1, x, y, planetImages[index], coinInfo[index]));
                 }
             }
         }
-        // index 5 ~ 10 56 78 910
+        // index 5 ~ 10
         int index = 5;
         for (int row = 1; row < 4; row++) {
             for (int col = 0; col < 2; col++) {
@@ -83,13 +95,13 @@ public class MainMapView extends JFrame implements Runnable {
                     int x = startX;
                     int y = startY + row * (gridSize + gap);
                     //g.drawImage(planetImages[index], x, y, gridSize, gridSize, null);
-                    nodes.add(new PlanetNode(index, x, y, planetImages[index]));
+                    nodes.add(new PlanetNode(index + 1, x, y, planetImages[index], coinInfo[index]));
                 }
                 else {
                     int x = startX + 4 * (gridSize + gap);
                     int y = startY + row * (gridSize + gap);
                     //g.drawImage(planetImages[index], x, y, gridSize, gridSize, null);
-                    nodes.add(new PlanetNode(index, x, y, planetImages[index]));
+                    nodes.add(new PlanetNode(index + 1, x, y, planetImages[index], coinInfo[index]));
                 }
                 index++;
             }
@@ -100,11 +112,12 @@ public class MainMapView extends JFrame implements Runnable {
             int x = startX + dist++ * (gridSize + gap);
             int y = startY + 4 * (gridSize + gap);
             //g.drawImage(planetImages[col], x, y, gridSize, gridSize, null);
-            nodes.add(new PlanetNode(col, x, y, planetImages[0 + (col - 10)]));
+            nodes.add(new PlanetNode(col + 1, x, y, planetImages[0 + (col - 10)], coinInfo[index]));
         }
 
         // Frame 설정
-        addKeyListener(key);
+//        addKeyListener(key);
+        addMouseListener(mouse);
         setTitle("mini game: meteor shooter");
         // 창을 닫을 때 프로그램 종료 설정
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
