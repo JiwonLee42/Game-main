@@ -8,6 +8,7 @@ public class Member implements Serializable {
     private String nickName;
     private int winNum;
     private int loseNum;
+    private int codeNow;
 
     public Member(String id, String password, String nickName) {
         this.id = id;
@@ -33,5 +34,13 @@ public class Member implements Serializable {
 
     public int getLoseNum() {
         return loseNum;
+    }
+
+    public int getCodeNow() {
+        return codeNow;
+    }
+
+    public void setCodeNow(int codeNow) {
+        this.codeNow = codeNow;
     }
 }
