@@ -11,7 +11,7 @@
 </div>
 <br/>
 <div align="center">
-## :mag: Tools 🔎 
+:mag: Tools 🔎 
 </div>
 <br/>
 <div align="center">
