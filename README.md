@@ -1,10 +1,10 @@
 # :rocket: Java 게임 프로젝트 Solar System :rocket:
 <br/>
 <div align = "center">
-  <img src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/apple/285/satellite_1f6f0.png" width="30" />
+  <h3> 📚 TechStack 📚 </h3>
+  <br/>
+  ✨Platforms & Languages ✨
 </div>
-<br/>
-##📚 TechStack 📚
 <br/>
 <div align="center">
   <img src="https://img.shields.io/badge/Java-007396?style=flat&logo=Java&logoColor=white" />
