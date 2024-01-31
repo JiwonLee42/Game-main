@@ -18,7 +18,8 @@
   <img src="https://img.shields.io/badge/intellijidea-000000?style=flat&logo=intellijidea&logoColor=white" />
   <img src="https://img.shields.io/badge/github-181717?style=flat&logo=github&logoColor=white" />
 </div>
-## Solar System
+
+ ## Solar System
 '고급자바프로그래밍'을 수강하며 진행한 우주 테마의 Java 게임 프로젝트입니다.
 
 <br>
