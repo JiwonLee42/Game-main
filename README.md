@@ -26,10 +26,10 @@
 <br>
 <p>
   플로우차트
-  <img src="https://ibb.co/pQcZSvt">
+  <img src="https://i.ibb.co/pQcZSvt/flowchart.png" alt="플로우차트">
 </p>
-![미니게임1]("https://ibb.co/6bR6VL1")
-![미니게임2]("https://ibb.co/LNZ8q8w")
-![미니게임3]("https://ibb.co/LNZ8q8w")
-![메인게임]("https://ibb.co/5FmnXT8")
+![미니게임1](https://i.ibb.co/6bR6VL1/minigame1.png)
+![미니게임2](https://i.ibb.co/LNZ8q8w/minigame2.png)
+![미니게임3](https://i.ibb.co/LNZ8q8w/minigame3.png)
+![메인게임](https://i.ibb.co/5FmnXT8/main-game.png)
 
