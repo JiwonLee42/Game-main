@@ -24,7 +24,10 @@
 
 <br>
 <br>
-![플로우차트]("https://ibb.co/pQcZSvt")
+<p>
+  플로우차트
+  <img src="https://ibb.co/pQcZSvt">
+</p>
 ![미니게임1]("https://ibb.co/6bR6VL1")
 ![미니게임2]("https://ibb.co/LNZ8q8w")
 ![미니게임3]("https://ibb.co/LNZ8q8w")
