@@ -24,10 +24,8 @@
 
 <br>
 <br>
-<p>
-  플로우차트
-  <img src="https://i.ibb.co/pQcZSvt/flowchart.png" alt="플로우차트">
-</p>
+
+![플로우차트](https://i.ibb.co/pQcZSvt/flowchart.png)
 ![미니게임1](https://i.ibb.co/6bR6VL1/minigame1.png)
 ![미니게임2](https://i.ibb.co/LNZ8q8w/minigame2.png)
 ![미니게임3](https://i.ibb.co/LNZ8q8w/minigame3.png)
