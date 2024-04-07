@@ -24,8 +24,8 @@
 
 <br>
 <br>
-![플로우차트]("https://ibb.co/pQcZSvt")
-![미니게임1]("https://ibb.co/6bR6VL1")
-![미니게임2]("https://ibb.co/LNZ8q8w")
-![미니게임3]("https://ibb.co/LNZ8q8w")
-![메인게임]("https://ibb.co/5FmnXT8")
+<img src="https://ibb.co/pQcZSvt" alt="플로우차트">
+<img src="https://ibb.co/6bR6VL1" alt="미니게임1">
+<img src="https://ibb.co/LNZ8q8w" alt="미니게임2">
+<img src="https://ibb.co/LNZ8q8w" alt="미니게임3">
+<img src="https://ibb.co/5FmnXT8" alt="메인게임">
